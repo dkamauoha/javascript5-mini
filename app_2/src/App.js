@@ -12,8 +12,9 @@ class App extends Component {
   }
   render() {
 
-    const favFoods = this.state.favoriteFoods.map( item, i => {
-        return <FoodItem foodItem={item}/>
+    const favFoods = this.state.favoriteFoods.map((food, i) => {
+      return <FoodItem key={i}
+                foodItem={food}/>
     })
 
     return (
